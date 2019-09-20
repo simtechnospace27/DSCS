@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>DSCS</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap_css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap_css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/registration.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+      <div class="row">
+      <div class="col-12">
+           
+            <!-- multistep form -->
+<form id="msform">
+    <img src="img/dscs_logo.jpeg" class="registration_top_img" alt="DSCS Logo">
+        
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li class="active">&nbsp;</li>
+      <li>&nbsp;</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+      <h2 class="fs-title">Create DSCS Account</h2>
+      <h3 class="fs-subtitle">This is step 1</h3>
+    
+
+
+    <div class="inner-addon left-addon">
+        <span class="fa fa-user-circle"></span>
+        <input type="text" name="usersname" id="usersname" placeholder="Enter Full Name" class="form-control" />
+    </div>
+    
+
+
+    <div class="inner-addon left-addon">
+      <span class="fa fa-mobile"></span>
+      <input type="text" onkeyup="check(); return false;" name="mobilenumber" id="mobilenumber" placeholder="Enter Mobile Number" class="form-control" />
+    </div>
+
+  <div class="inner-addon left-addon">
+    <span class="fa fa-map-marker"></span>
+    <input type="text" name="pincode" id="pincode" placeholder="Enter Area Pincode" class="form-control" />
+  </div>
+     
+      <input type="button" name="next" id="generateotp" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Create DSCS Account</h2>
+      <h3 class="fs-subtitle">This is step 2</h3>
+     
+      <div class="inner-addon left-addon">
+        <span class="fa fa-envelope"></span>
+        <input type="text" name="emailid" id="emailid" placeholder="Enter Email ID" class="form-control" />
+    </div>
+
+    <div class="inner-addon left-addon">
+      <span class="fa fa-car"></span>
+      <input type="text" name="carnumber" id="carnumber" placeholder="Enter Car Number" class="form-control" />
+  </div>
+
+  <div class="inner-addon left-addon">
+    <span class="fa fa-handshake-o"></span>
+    <input type="text" name="otpreceived" id="otpreceived" placeholder="Enter OTP Received on Given Mobile Number" class="form-control" />
+</div>
+
+      <input type="button" name="previous" class="previous action-button" value="Previous" />
+      <input type="button" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+    
+  </form>     
+        </div>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/bootstrap_js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/bootstrap_js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/registration.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+        
+        
+
+    </body>
+</html>
