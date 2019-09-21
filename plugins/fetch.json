@@ -6,5 +6,21 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-otp-auto-verification": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-otp-auto-verification"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-sms": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-sms@^1.0.5"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

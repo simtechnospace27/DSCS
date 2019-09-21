@@ -54,22 +54,32 @@
       <h3 class="fs-subtitle">This is step 1</h3>
     
 
-
+<div class="form-group">
+  <label for="usersname" class="smalltextfont">FULL NAME: </label>
     <div class="inner-addon left-addon">
         <span class="fa fa-user-circle"></span>
-        <input type="text" name="usersname" id="usersname" placeholder="Enter Full Name" class="form-control" />
+        <input type="text" name="usersname" onkeyup="validateUserName()" onkeypress="return blockSpecialChar(event)" id="usersname" placeholder="Enter Full Name" class="form-control" />
     </div>
+    <span class="help-block" id="usernameerror">Please Enter Valid Username</span>
+  </div>
     
 
-
+  <div class="form-group">
+      <label for="mobilenumber" class="smalltextfont">MOBILE NUMBER: </label>    
     <div class="inner-addon left-addon">
       <span class="fa fa-mobile"></span>
       <input type="text" onkeyup="check(); return false;" name="mobilenumber" id="mobilenumber" placeholder="Enter Mobile Number" class="form-control" />
     </div>
+    <span class="help-block" id="mobilenumbererror">Please Enter Valid Mobile Number</span>
+    </div>
 
+    <div class="form-group">
+        <label for="pincode" class="smalltextfont">PINCODE: </label>      
   <div class="inner-addon left-addon">
     <span class="fa fa-map-marker"></span>
-    <input type="text" name="pincode" id="pincode" placeholder="Enter Area Pincode" class="form-control" />
+    <input type="text" name="pincode" id="pincode" onkeyup="validatePinCode()" onkeypress="return blockPinCodeValid(event)" placeholder="Enter Area Pincode" class="form-control" />
+  </div>
+  <span class="help-block" id="pincodeerror">Please Enter Valid Pin Code</span>
   </div>
      
       <!-- <input type="button" name="next" id="generateotp" class="next action-button" value="Next" />
@@ -78,28 +88,65 @@
       <h2 class="fs-title">Create DSCS Account</h2>
       <h3 class="fs-subtitle">This is step 2</h3>
       -->
+      <div class="form-group">
+          <label for="emailid" class="smalltextfont">EMAIL ID: </label>
       <div class="inner-addon left-addon">
         <span class="fa fa-envelope"></span>
-        <input type="text" name="emailid" id="emailid" placeholder="Enter Email ID" class="form-control" />
+        <input type="text" name="emailid" onkeyup="validateEmail(this);" id="emailid" placeholder="Enter Email ID" class="form-control" />
+    </div>
+    <span class="help-block" id="emailiderror">Please Enter Valid Email Id</span>
     </div>
 
+
+<div class="form-group" class="smalltextfont">
+          <label for="carnumber">CAR NUMBER: </label>
     <div class="inner-addon left-addon">
       <span class="fa fa-car"></span>
-      <input type="text" name="carnumber" id="carnumber" placeholder="Enter Car Number" class="form-control" />
+      <input type="text" name="carnumber" onkeyup="validateCarNumber(this);" id="carnumber" placeholder="Enter Car Number" class="form-control" />
+  </div>
+  <span class="help-block" id="carnumbererror">Please Enter Valid Car Number in Format MH01 CE1234 or MH 01 C CE 1234</span>
   </div>
 
 
-      <input type="button" name="next" id="generateotp" class="next action-button" value="Next" />
+      <center><input type="button" name="next" id="generateotp" class="next action-button" value="Next" /></center>
     </fieldset>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)"/>
+              <input id="codeBox2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)"/>
+              <input id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)"/>
+              <input id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)"/>
+             
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="modaldismis">Close</button>
+            <button type="button" class="btn btn-primary" id="submitotp">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     
   </form>     
         </div>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript" src="js/bootstrap_js/bootstrap.js"></script>
         <script type="text/javascript" src="js/bootstrap_js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/registration.js"></script>
-        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         
         
 

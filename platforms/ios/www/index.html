@@ -48,11 +48,6 @@
 <form id="msform">
     <img src="img/dscs_logo.jpeg" class="registration_top_img" alt="DSCS Logo">
         
-    <!-- progressbar -->
-    <ul id="progressbar">
-      <li class="active">&nbsp;</li>
-      <li>&nbsp;</li>
-    </ul>
     <!-- fieldsets -->
     <fieldset>
       <h2 class="fs-title">Create DSCS Account</h2>
@@ -77,12 +72,12 @@
     <input type="text" name="pincode" id="pincode" placeholder="Enter Area Pincode" class="form-control" />
   </div>
      
-      <input type="button" name="next" id="generateotp" class="next action-button" value="Next" />
+      <!-- <input type="button" name="next" id="generateotp" class="next action-button" value="Next" />
     </fieldset>
     <fieldset>
       <h2 class="fs-title">Create DSCS Account</h2>
       <h3 class="fs-subtitle">This is step 2</h3>
-     
+      -->
       <div class="inner-addon left-addon">
         <span class="fa fa-envelope"></span>
         <input type="text" name="emailid" id="emailid" placeholder="Enter Email ID" class="form-control" />
@@ -93,23 +88,47 @@
       <input type="text" name="carnumber" id="carnumber" placeholder="Enter Car Number" class="form-control" />
   </div>
 
-  <div class="inner-addon left-addon">
-    <span class="fa fa-handshake-o"></span>
-    <input type="text" name="otpreceived" id="otpreceived" placeholder="Enter OTP Received on Given Mobile Number" class="form-control" />
-</div>
 
-      <input type="button" name="previous" class="previous action-button" value="Previous" />
-      <input type="button" name="submit" class="submit action-button" value="Submit" />
+      <input type="button" name="next" id="generateotp" class="next action-button" value="Next" />
     </fieldset>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input id="codeBox1" type="number" maxlength="1" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)"/>
+              <input id="codeBox2" type="number" maxlength="1" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)"/>
+              <input id="codeBox3" type="number" maxlength="1" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)"/>
+              <input id="codeBox4" type="number" maxlength="1" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)"/>
+              <input id="codeBox5" type="number" maxlength="1" onkeyup="onKeyUpEvent(5, event)" onfocus="onFocusEvent(5)"/>
+              <input id="codeBox6" type="number" maxlength="1" onkeyup="onKeyUpEvent(6, event)" onfocus="onFocusEvent(6)"/>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     
   </form>     
         </div>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript" src="js/bootstrap_js/bootstrap.js"></script>
         <script type="text/javascript" src="js/bootstrap_js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/registration.js"></script>
-        <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         
         
 

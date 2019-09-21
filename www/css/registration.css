@@ -43,6 +43,7 @@
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #1C2833;
+	text-align: center;
 }
 /*headings*/
 .fs-title {
@@ -50,12 +51,14 @@
 	text-transform: uppercase;
 	color: #2C3E50;
 	margin-bottom: 10px;
+	text-align: center;
 }
 .fs-subtitle {
 	font-weight: normal;
 	font-size: 13px;
 	color: #666;
 	margin-bottom: 20px;
+	text-align: center;
 }
 /*progressbar*/
 #progressbar {
@@ -139,3 +142,39 @@
 	margin-bottom: 20px;
 }
 
+
+input[type=number] {
+	height: 45px !important;
+	width: 45px !important;
+	font-size: 25px !important;
+	text-align: center !important;
+	border: 1px solid #000000 !important;
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+  padding-left: 0px !important;
+	padding-right: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+fieldset{
+	text-align: left;
+}
+
+
+.smalltextfont{
+	font-size: 12px;
+}
+
+#usernameerror, #mobilenumbererror, #pincodeerror, #emailiderror, #carnumbererror{
+	display: none;
+	color: red;
+	font-size: 10px;
+}

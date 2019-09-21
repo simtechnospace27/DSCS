@@ -9,6 +9,12 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.doorstepcarservices.dscs"
+    },
+    "cordova-plugin-otp-auto-verification": {
+      "PACKAGE_NAME": "com.doorstepcarservices.dscs"
+    },
+    "cordova-plugin-sms": {
+      "PACKAGE_NAME": "com.doorstepcarservices.dscs"
     }
   },
   "dependent_plugins": {}

@@ -4,6 +4,12 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="OTPAutoVerification">
+        <param name="android-package" value="org.apache.cordova.OTPAutoVerification.OTPAutoVerification" />
+    </feature>
+    <feature name="SMS">
+        <param name="android-package" value="com.rjfun.cordova.sms.SMSPlugin" />
+    </feature>
     <name>DSCS</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -15,6 +21,7 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <access launch-external="yes" origin="sms:*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
